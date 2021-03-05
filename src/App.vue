@@ -1,30 +1,33 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
+  <nav>
+    <div class="nav__logo">
+      <h1>Quizzyy</h1>
+    </div>
+  </nav>
   <router-view />
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<style scoped>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.nav__logo {
+  background-image: linear-gradient(to bottom right, rgb(76, 0, 230), rgba(59, 0, 179, 0.8));
+  height: 10vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
 }
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
+.nav__logo h1 {
+  color: #fff;
   font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
 }
 </style>
